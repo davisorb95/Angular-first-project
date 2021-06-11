@@ -1,0 +1,9 @@
+<section class="container">
+    <h1>{{title}}</h1>
+
+    <button class="btn btn-dark me-3" type="button" (click)="increaseCounter(1)" [disabled]="maxLimitCounter">+
+        1</button>
+    <span>{{counter}}</span>
+    <button class="btn btn-dark ms-3" type="button" (click)="increaseCounter(-1)" [disabled]="minLimitCounter">-
+        1</button>
+</section>

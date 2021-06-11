@@ -1,0 +1,27 @@
+<main class="container">
+
+    <h1>Pokemon List</h1>
+    <hr>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <!-- <th scope="col">Image</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pokemonResult of pokemonResults; index as i">
+                <th scope="row">{{i}}</th>
+                <td>{{pokemonResult.name}}</td>
+                <!-- <td>
+                    <img class="poke-image" [src]="pokemonResult.url" alt="poke image">
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-dark" type="button" (click)="callGetAllPokemons()">Get Pokemon List</button>
+
+</main>
