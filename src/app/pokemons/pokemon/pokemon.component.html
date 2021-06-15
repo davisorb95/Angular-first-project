@@ -1,0 +1,42 @@
+<main class="container">
+
+    <h1> {{ name }} </h1>
+
+    <dl>
+        <td> <strong>Name:</strong> </td>
+        <dd> {{ name }} </dd>
+
+        <td> <strong>Weight:</strong> </td>
+        <dd> {{ weight }} </dd>
+
+        <td> <strong>Method:</strong> </td>
+        <dd> {{ getName() }} </dd>
+
+        <td> <strong>Capitalized:</strong> </td>
+        <dd> {{ capitalizedName }} </dd>
+    </dl>
+
+    <button class="btn btn-primary m-2" type="button" (click)="changePokemon()">Change Pokemon</button>
+    <button class="btn btn-primary m-2" type="button" (click)="changeName()">Change Name</button>
+    <button class="btn btn-primary m-2" type="button" (click)="changeWeight()">Change Weight</button>
+
+    <h2> Persons list </h2>
+
+    <h5 class="hidden" id="title"> Deleted Item </h5>
+    <ng-container *ngIf="removedItem; else noItems">
+        <p class="hidden" id="description"> {{ removedItem }} </p>
+    </ng-container>
+
+    <ng-template #noItems>
+        <p class="hidden" id="description"> No items </p>
+    </ng-template>
+    
+
+    <ul>
+        <li *ngFor="let person of persons"> {{ person.name }} </li>
+        <li *ngIf="noPersons"> No persons </li>
+    </ul>
+
+    <button class="btn btn-danger m-2" type="button" (click)="deleteItem()">Delete item</button>
+
+</main>

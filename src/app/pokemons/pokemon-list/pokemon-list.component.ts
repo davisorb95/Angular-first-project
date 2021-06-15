@@ -7,7 +7,7 @@ import { PokemonService } from '../services/pokemon.service';
     styleUrls: ['./pokemon-list.component.css']
 })
 export class PokemonListComponent {
-    pokemonResults: any = [];
+    pokemonResults: any[] = [];
     
     constructor(private pokemonService: PokemonService) {}
 

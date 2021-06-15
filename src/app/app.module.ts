@@ -4,18 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { CounterComponent } from './counter/counter.component';
-import { PokemonListComponent } from './pokemons/pokemon-list/pokemon-list.component';
+import { CounterModule } from './counter/counter.module';
+import { PokemonModule } from './pokemons/pokemons.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CounterComponent,
-    PokemonListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    CounterModule,
+    PokemonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
