@@ -1,0 +1,11 @@
+<h3>Add</h3>
+<hr>
+
+<form (ngSubmit)="addNewCharacter()">
+    <input class="form-control m-2" type="text" placeholder="Name" name="name"
+        [(ngModel)]="newCharacter.name">
+    <input class="form-control m-2" type="number" placeholder="Bountie" name="bountie"
+        [(ngModel)]="newCharacter.bountie">
+
+    <button class="btn btn-success m-2" type="submit">Save</button>
+</form>

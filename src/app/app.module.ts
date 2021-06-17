@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { CounterModule } from './counter/counter.module';
+import { CountersModule } from './counters/counters.module';
 import { PokemonModule } from './pokemons/pokemons.module';
+import { OnePieceModule } from './one-piece/one-piece.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PokemonModule } from './pokemons/pokemons.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    CounterModule,
+    CountersModule,
+    OnePieceModule,
     PokemonModule
   ],
   providers: [],

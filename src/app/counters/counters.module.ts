@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-
-import { CounterComponent } from './counter.component';
+import { CounterComponent } from './counter/counter.component';
 
 
 
@@ -16,4 +15,4 @@ import { CounterComponent } from './counter.component';
     CommonModule
   ]
 })
-export class CounterModule { }
+export class CountersModule { }
